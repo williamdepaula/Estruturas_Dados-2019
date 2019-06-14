@@ -1,0 +1,31 @@
+Autor: William Pereira de Paula
+Sistemas de Informação/CPCX - UFMS
+Máteria: Estruturas de Dados I
+Professor(a): Glasielly Demori Proença
+
+Descrição:
+Programa que implementa um simples controle de memoria utilizando uma lista simplesmente encadeada. Trabalho da
+disciplina de Estrutura de Dados I.
+
+GITHUB: https://github.com/williamdepaula/Estruturas_Dados-2019
+
+Como Usar:
+Este projeto foi criado e gerado usando INTELLIJ IDEA 2018.3.04, a pasta de configuração dele está no diretorio do
+projeto permitindo com que o mesmo seja aberto facilmente nele.
+Caso outra IDE apresente dificuldades para importar o projeto, os arquivos fontes podem ser facilmente acessado na pasta
+
+- Projeto_I/src/br/ufms/ed/projeto/
+
+Os 3 arquivos de classe do projeto são
+    - Main.java                 Arquivo principal que controla a aplicação
+    - EspacoMemoria.java        Classe java que implementa um Nó, representanto uma area de memoria livre, .
+    - Memoria.java              Controlador de memoria que implementa a lista encadeada.
+
+Dentro da pasta do Projeto está incluso o arquivo Projeto_I.jar, compilado em bytecode.
+Para executa-lo diretamente utlize o comando
+java -jar Projeto_I.jar
+
+Caso exista atualizações futuras a mesma será implementada no GitHub do projeto.
+
+
+
