@@ -110,6 +110,8 @@ public class Memoria {
             ptr = ptr.getProxima();
         }
 
+        retorno.append("->");
+
         return retorno.toString();
     }
 
@@ -140,32 +142,32 @@ public class Memoria {
     public String imprimirMemoriaOcupada(){
         StringBuilder saida = new StringBuilder();
         if(this.inicio==null){
-            saida.append("->[0h, 4096]");
+            saida.append("->[0h , 4096]->");
         } else {
            if(this.inicio.getEndereco()>0){
-               saida.append("->[0h, ");
+               saida.append("->[0h , ");
                saida.append(this.inicio.getEndereco());
-               saida.append("]");
+               saida.append("]->");
            }
 
            EspacoMemoria ptr = this.inicio.getProxima();
            EspacoMemoria anterior = this.inicio;
            while (ptr!=null){
-               saida.append("->[");
-               saida.append(Integer.toHexString(anterior.getFim())+"h,");
+               saida.append("[");
+               saida.append(Integer.toHexString(anterior.getFim())+"h , ");
                saida.append(ptr.getEndereco()-anterior.getFim());
-               saida.append("]");
+               saida.append("]->");
 
                anterior = ptr;
                ptr = ptr.getProxima();
            }
 
            if(anterior.getFim()<4096){
-               saida.append("->[");
+               saida.append("[");
                saida.append(Integer.toHexString(anterior.getFim()));
-               saida.append("h, ");
+               saida.append("h , ");
                saida.append(4096-anterior.getFim());
-               saida.append("]");
+               saida.append("]->");
            }
 
         }

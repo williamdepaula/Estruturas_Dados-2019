@@ -47,7 +47,7 @@ public class EspacoMemoria {
 
     public String toString(){
         StringBuilder retorno = new StringBuilder();
-        retorno.append("["+ Integer.toHexString(this.endereco)+"h, " + this.tamanho +"]");
+        retorno.append("["+ Integer.toHexString(this.endereco)+"h , " + this.tamanho +"]");
         return retorno.toString();
     }
 
