@@ -13,12 +13,12 @@ public class Main {
 
         int comando = 0;
         do {
-            System.out.println("Entre com um comando: ");
+           /* System.out.println("Entre com um comando: ");
             System.out.println("1 - Solicitar Memoria");
             System.out.println("2 - Devolução de Memoria");
             System.out.println("3 - Impressão dos Blocos Livres");
             System.out.println("4 - Impressão dos Blocos de Memória Ocupados");
-            System.out.println("0 - Sair");
+            System.out.println("0 - Sair");*/
             try {
                 comando = entrada.nextInt();
 
@@ -37,6 +37,8 @@ public class Main {
                     int endereco;
                     tamanho = entrada.nextInt();
                     endHex = entrada.next();
+                    if(endHex.endsWith("h"))
+                        endHex = endHex.substring(0, endHex.length()-1);
                     endereco=Integer.parseInt(endHex,16);
                     try {
                         memoria.devolveMemoria(tamanho, endereco);
